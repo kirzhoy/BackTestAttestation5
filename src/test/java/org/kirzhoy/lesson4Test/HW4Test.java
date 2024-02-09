@@ -1,18 +1,17 @@
 package org.kirzhoy.lesson4Test;
 
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 import org.kirzhoy.lesson4.dto.Responce;
 import static io.restassured.RestAssured.given;
 
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+//@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@TestMethodOrder(MethodOrderer.DisplayName.class)
 
 public class HW4Test extends AbstractTest {
    public static Responce response;
 
-    @Order(1)
+   // @Order(1)
+    @DisplayName("A")
     @Test
     void addToShoppingListTest() {  //body pojo request
         response = given()
@@ -29,7 +28,8 @@ public class HW4Test extends AbstractTest {
                 .as(Responce.class);
     }
 
-    @Order(2)
+    //@Order(2)
+    @DisplayName("B")
     @Test
     void getFromShoppingListTest() {
         given()
@@ -41,7 +41,8 @@ public class HW4Test extends AbstractTest {
         //pojo for this response
     }
 
-    @Order(3)
+ //   @Order(3)
+ @DisplayName("C")
     @Test
     void deleteFromShoppingListTest() {
         given()
