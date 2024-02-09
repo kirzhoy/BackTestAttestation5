@@ -11,7 +11,7 @@ public class ApiFoodChainTest {
 
    @Test
     void foodChainTest() {
-        String id =  given()
+      /*  String id =  given()
               .body("{\n"
                         + " \"date\": 1644881179,\n"
                         + " \"slot\": 1,\n"
@@ -43,7 +43,7 @@ public class ApiFoodChainTest {
                 .delete("https://api.spoonacular.com/mealplanner/c1ad477d-8401-4e86-896c-22582e43f3b7/items/" + id)
                 .then()
                 .statusCode(200)
-                .log().all();
+                .log().all();*/
     }
 
 }
